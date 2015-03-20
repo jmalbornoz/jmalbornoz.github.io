@@ -141,7 +141,7 @@ training <- training4[inTrain,]
 testing <- training4[-inTrain,]
 ```
 
-We will use cross-validation to determine how well the model will generalize to an independent data set; for reasons of efficiency we will use 5 folds.
+We will use k-fold cross-validation to determine how well the model will generalize to an independent data set; for reasons of efficiency we will use 5 folds.
 
 ```{r trainControl}
 fitControl <- trainControl(method = "cv", number = 5, savePredictions = TRUE, allowParallel = TRUE)
